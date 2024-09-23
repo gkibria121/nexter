@@ -18,4 +18,54 @@ body {
   line-height: 1.6;
 }
 
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(60rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(60rem, 1fr) [full-end];
+}
+
+.sidebar {
+  background-color: #c69963;
+  grid-row: 1/-1;
+  grid-column: sidebar-start/sidebar-end;
+}
+
+.header {
+  background-color: #54483A;
+  grid-column: full-start/col-end 6;
+}
+
+.realtors {
+  background-color: #101d2c;
+  grid-column: col-start 7/-1;
+}
+
+.features {
+  background-color: #aaa;
+  grid-column: center-start/center-end;
+}
+
+.story__pictures {
+  background-color: #B28451;
+  grid-column: full-start/col-end 4;
+}
+.story__content {
+  background-color: #f9f7f6;
+  grid-column: col-start 5/-1;
+}
+
+.home {
+  background-color: #101d2c;
+  grid-column: center-start/center-end;
+}
+
+.gallery {
+  background-color: #B28451;
+}
+
+.footer {
+  background-color: #101d2c;
+  grid-column: full-start/full-end;
+}
+
 /*# sourceMappingURL=style.css.map */
