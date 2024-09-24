@@ -1,0 +1,15 @@
+.mb-sm{ margin-bottom: 1rem;}
+.mb-md{ margin-bottom: 2rem;}
+.mb-lg{ margin-bottom: 3rem;}
+.mb-xl{ margin-bottom: 4rem;}
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    background-color: $color-primary;
+    color: white;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+}
