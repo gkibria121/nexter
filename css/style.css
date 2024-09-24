@@ -135,12 +135,28 @@ body {
 .story__pictures {
   background-color: #B28451;
   grid-column: full-start/col-end 4;
+  position: relative;
+  background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
+}
+.story__img--1 {
+  width: 66.6666666667%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.story__img--2 {
+  width: 58%;
+  position: absolute;
+  top: 65%;
+  left: 80%;
+  transform: translate(-50%, -50%);
 }
 .story__content {
   background-color: #f9f7f6;
   grid-column: col-start 5/-1;
   padding: 6rem 8vw;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
