@@ -1,4 +1,37 @@
 .footer{
     background-color: $color-secondary;
     grid-column: full-start / full-end;
+
+    .nav{
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 5rem auto ;
+        justify-content: center;
+        &__link:link,&__link:visited{
+            max-width:  20rem;
+            min-width: 15rem;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            padding: 1.5rem;
+            display: block;
+            text-align: center;
+            transition: all .2s;
+
+        }
+        &__link:hover{
+            background-color: rgba(white, .1);
+            transform: translateY(-3px);
+        }
+    }
+}
+.copyright{
+    font-size: 1.5rem;
+    color: rgba(white, .5) ;
+    text-align: center;
+    padding: 5rem;
+    cursor: pointer;
 }

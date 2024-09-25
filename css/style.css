@@ -302,5 +302,37 @@ body {
   background-color: #101d2c;
   grid-column: full-start/full-end;
 }
+.footer .nav {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 5rem auto;
+  justify-content: center;
+}
+.footer .nav__link:link, .footer .nav__link:visited {
+  max-width: 20rem;
+  min-width: 15rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  display: block;
+  text-align: center;
+  transition: all 0.2s;
+}
+.footer .nav__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 5rem;
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=style.css.map */
