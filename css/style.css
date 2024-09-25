@@ -30,6 +30,11 @@ body {
   font-weight: 400;
 }
 
+.heading-1 {
+  font-size: 4rem;
+  color: white;
+}
+
 .heading-2 {
   font-size: 2.5rem;
   font-style: italic;
@@ -123,11 +128,71 @@ body {
 .header {
   background-color: #54483A;
   grid-column: full-start/col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr min-content 4rem 1fr 1fr;
+  grid-row-gap: 1.5rem;
+  padding: 3rem;
+  justify-content: center;
+  align-content: start;
+}
+.header__logo {
+  height: 4rem;
+  justify-self: center;
+  align-self: center;
+}
+.header__button {
+  align-self: start;
+  justify-self: start;
+}
+.header .seenon__text {
+  color: #f9f7f6;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.header .seenon__text::before, .header .seenon__text::after {
+  display: inline;
+  content: "";
+  background-color: currentColor;
+  flex-grow: 1;
+  height: 1px;
+}
+.header .seenon__logos {
+  display: flex;
+  gap: 10rem;
+  padding-inline: 2rem;
+}
+.header .seenon__logos img {
+  height: 2.5rem;
 }
 
 .realtors {
   background-color: #101d2c;
   grid-column: col-start 7/-1;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-row-gap: 1.5rem;
+  justify-items: center;
+}
+.realtors__img {
+  width: 7rem;
+  border-radius: 50%;
+}
+.realtors__list {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-column-gap: 2rem;
+  grid-row-gap: 3vw;
+}
+.realtors__sold {
+  text-transform: uppercase;
+  color: #aaa;
+  margin-top: -3px;
 }
 
 .features {
