@@ -2,4 +2,29 @@
     background-color: $color-primary;
     grid-row: 1/-1;
     grid-column: sidebar-start / sidebar-end;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn{
+    border: none;
+    border-radius: 0;
+    height: 2px;
+    width: 4.5rem; 
+    background-color: white;
+    margin-top: 4rem;
+
+    &::before,
+    &::after{
+        content: ''; 
+        display: block;
+        height: inherit;
+        width: inherit;
+        background-color: inherit;
+       
+    }
+    &::before{ transform: translateY(-1.5rem);}
+    &::after{ transform: translateY(1.5rem);}
+
+
 }
