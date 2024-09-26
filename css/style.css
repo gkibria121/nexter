@@ -10,6 +10,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Nunito", sans-serif;
@@ -22,6 +27,17 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content minmax(40vw, min-content) repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media (max-width: 75em) {
+  .container {
+    grid-template-columns: [sidebar-start] minmax(min-content, 8rem) [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+@media (max-width: 62em) {
+  .container {
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    grid-template-rows: 6rem 80vh min-content minmax(40vw, min-content) repeat(3, min-content);
+  }
 }
 
 .heading-4, .heading-3, .heading-2, .heading-1 {
@@ -102,6 +118,14 @@ body {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 62em) {
+  .sidebar {
+    grid-column: full-start/full-end;
+    grid-row: 1/span 1;
+    justify-content: end;
+    align-items: center;
+  }
+}
 
 .nav-btn {
   border: none;
@@ -124,6 +148,18 @@ body {
 .nav-btn::after {
   transform: translateY(1.5rem);
 }
+@media (max-width: 62em) {
+  .nav-btn {
+    margin-top: 0;
+    margin-right: 2rem;
+  }
+  .nav-btn::before {
+    transform: translateY(-1.3rem);
+  }
+  .nav-btn::after {
+    transform: translateY(1.3rem);
+  }
+}
 
 .header {
   background-color: #54483A;
@@ -136,6 +172,16 @@ body {
   padding: 3rem;
   justify-content: center;
   align-content: start;
+}
+@media (max-width: 75em) {
+  .header {
+    grid-template-rows: 1fr min-content minmax(4rem, min-content) 1fr 1fr;
+  }
+}
+@media (max-width: 62em) {
+  .header {
+    grid-column: full-start/full-end;
+  }
 }
 .header__logo {
   height: 4rem;
@@ -163,8 +209,14 @@ body {
 }
 .header .seenon__logos {
   display: flex;
-  gap: 10rem;
+  justify-content: space-between;
   padding-inline: 2rem;
+}
+@media (max-width: 48em) {
+  .header .seenon__logos {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
 }
 .header .seenon__logos img {
   height: 2.5rem;
@@ -179,6 +231,12 @@ body {
   grid-row-gap: 1.5rem;
   justify-items: center;
 }
+@media (max-width: 62em) {
+  .realtors {
+    grid-column: full-start/full-end;
+    padding: 5rem 0;
+  }
+}
 .realtors__img {
   width: 7rem;
   border-radius: 50%;
@@ -188,6 +246,16 @@ body {
   grid-template-columns: min-content max-content;
   grid-column-gap: 2rem;
   grid-row-gap: 3vw;
+}
+@media (max-width: 62em) {
+  .realtors__list {
+    grid-template-columns: repeat(3, min-content max-content);
+  }
+}
+@media (max-width: 36em) {
+  .realtors__list {
+    grid-template-columns: repeat(2, min-content max-content);
+  }
 }
 .realtors__sold {
   text-transform: uppercase;
@@ -227,6 +295,11 @@ body {
   position: relative;
   background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg);
 }
+@media (max-width: 62em) {
+  .story__pictures {
+    grid-column: 1/-1;
+  }
+}
 .story__img--1 {
   width: 66.6666666667%;
   position: absolute;
@@ -234,12 +307,25 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media (max-width: 62em) {
+  .story__img--1 {
+    position: relative;
+    left: 42%;
+  }
+}
 .story__img--2 {
   width: 58%;
   position: absolute;
   top: 65%;
   left: 80%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 62em) {
+  .story__img--2 {
+    position: relative;
+    top: 8%;
+    left: 70%;
+  }
 }
 .story__content {
   background-color: #f9f7f6;
@@ -250,6 +336,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media (max-width: 62em) {
+  .story__content {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
 }
 .story__text {
   margin-bottom: 2rem;

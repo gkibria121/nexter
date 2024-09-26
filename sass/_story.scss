@@ -4,6 +4,10 @@
         grid-column: full-start / col-end 4; 
         position: relative;
         background-image: linear-gradient( rgba($color-primary,.5),rgba($color-primary,.5)  ),  url(../img/back.jpg);
+        @include response-to(lg){
+            grid-column: 1 / -1;  
+             
+        }
     }
     &__img--1{
         width:calc((4/6)* 100%); 
@@ -11,6 +15,11 @@
         top: 50%;
         left: 50% ;
         transform: translate(-50%, -50%);
+        @include response-to(lg){
+            position: relative;
+            left: 42% ;
+             
+        }
 
     }
     &__img--2{ 
@@ -19,11 +28,16 @@
         top: 65%;
         left: 80%;
         transform: translate(-50%, -50%);
+        @include response-to(lg){
+            position: relative;
+            top: 8%;
+            left: 70%;
+        }
     }
     &__content{
         background-color: $color-grey-light-1;
         grid-column: col-start 5 / -1;
-
+        
         padding: 6rem 8vw;
         font-size: 1.4rem;
 
@@ -31,7 +45,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-
+        @include response-to(lg){
+            grid-column: 1 / -1;
+            grid-row: 5/6;
+        }
     }
     &__text{
         margin-bottom: 2rem;

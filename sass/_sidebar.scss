@@ -4,6 +4,12 @@
     grid-column: sidebar-start / sidebar-end;
     display: flex;
     justify-content: center;
+    @include response-to(lg){
+        grid-column: full-start / full-end;
+        grid-row: 1/ span 1;
+        justify-content: end;
+        align-items: center;
+    }
 }
 
 .nav-btn{
@@ -26,5 +32,13 @@
     &::before{ transform: translateY(-1.5rem);}
     &::after{ transform: translateY(1.5rem);}
 
-
+    @include response-to(lg){ 
+        margin-top: 0;
+        margin-right: 2rem;
+         
+        
+        &::before{ transform: translateY(-1.3rem);}
+        &::after{ transform: translateY(1.3rem);}
+        
+    }
 }

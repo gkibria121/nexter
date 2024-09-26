@@ -9,7 +9,12 @@
     padding: 3rem;
     justify-content: center;
     align-content: start;
-
+    @include response-to(xl){
+        grid-template-rows: 1fr min-content minmax(4rem,min-content) 1fr 1fr;
+    }
+    @include response-to(lg){
+        grid-column: full-start / full-end;
+    }
     &__logo{
         height: 4rem;
         justify-self: center;
@@ -39,10 +44,13 @@
 
         }
         &__logos{
-            display: flex;
-            gap: 10rem;
+            display: flex; 
+            justify-content: space-between;
             padding-inline: 2rem;
-
+            @include response-to(md){
+                flex-wrap: wrap;
+                gap: 2rem;
+            }
             img{
                 height: 2.5rem;
             }
